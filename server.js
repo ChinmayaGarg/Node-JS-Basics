@@ -8,7 +8,11 @@ const http = require('http');
 // http.createServer(function (req, res) {});
 
 // Passing requestListener using arrow function
-http.createServer((req, res) => {});
+const server = http.createServer((req, res) => {
+  console.log(req);
+});
+
+server.listen(8080);
 
 /*
 
@@ -30,4 +34,15 @@ requestListener is a callback function because it is called by nodejs whenever a
 The node will execute this requestListener function, passed as arguement in http.createServer, whenever a request reasches our server.
 This is a event-driven architecture, that nodejs uses heavily.
 We work a lot with such setups or such code snippets where we tell node if X happens, do Y, as in above case if request comes please execute requestListener. 
+
+* server.listen
+http.createServer returns a server, hence we have to store that in a new const (use const because we will never overwrite server).
+Now we can use this stored server's .listen method to listen to request on the PORT specified in the server.listen().
+
+.listen starts a process where nodejs will not immediately exit our script but where nodejs will instead keep this running to listen,
+that is why method is named "listen" for incoming requests.
+
+.listen takes a couple of arguements, 
+the 1st is the port on which one wants to listen.
+the second is hostName, by default this is the name of the machine running on, so that is localhost by default.
 */
