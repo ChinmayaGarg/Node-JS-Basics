@@ -5,7 +5,10 @@ const http = require('http');
 // http.createServer(reqListener);
 
 // Passing requestListener using annonymous function
-http.createServer(function (req, res) {});
+// http.createServer(function (req, res) {});
+
+// Passing requestListener using arrow function
+http.createServer((req, res) => {});
 
 /*
 
