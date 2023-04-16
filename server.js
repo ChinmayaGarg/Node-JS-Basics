@@ -23,4 +23,6 @@ The function passed as an arguement to createServer takes in 2 parameters as des
 2. typeof http.ServerResponse
 
 Another way to pass a requestListener is by using annonymous function.
+
+requestListener is a callback function because it is called by nodejs whenever a request reaches our server.
 */
