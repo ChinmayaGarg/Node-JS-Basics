@@ -1,8 +1,11 @@
 const http = require('http');
 
-function reqListener(req, res) {}
+// function reqListener(req, res) {}
 
-http.createServer(reqListener);
+// http.createServer(reqListener);
+
+// Passing requestListener using annonymous function
+http.createServer(function (req, res) {});
 
 /*
 
@@ -15,4 +18,6 @@ function createServer<typeof http.IncomingMessage, typeof http.ServerResponse>(
 The function passed as an arguement to createServer takes in 2 parameters as described above:
 1. typeof http.IncomingMessage, 
 2. typeof http.ServerResponse
+
+Another way to pass a requestListener is by using annonymous function.
 */
