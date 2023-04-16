@@ -1,6 +1,8 @@
 const http = require('http');
 
-http.createServer();
+function reqListener(req, res) {}
+
+http.createServer(reqListener);
 
 /*
 
@@ -10,4 +12,7 @@ Hover over createServer to see its definition:
 function createServer<typeof http.IncomingMessage, typeof http.ServerResponse>(
 	requestListener?: http.RequestListener<typeof http.IncomingMessage, typeof http.ServerResponse> | undefined): http.Server<...> (+1 overload)
 
+The function passed as an arguement to createServer takes in 2 parameters as described above:
+1. typeof http.IncomingMessage, 
+2. typeof http.ServerResponse
 */
